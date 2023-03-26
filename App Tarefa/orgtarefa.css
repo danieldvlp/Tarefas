@@ -11,7 +11,9 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient( to bottom, rgb(5, 143, 207), rgb(101, 206, 255));
+  background: url(Img/pexels-free-photoscc-64777.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -81,7 +83,9 @@ nav > ul {
   width: 350px;
   height: 300px;
   transform: translate(-50%, -50%);
-  background: linear-gradient( to bottom, rgb(33, 34, 34), rgb(59, 59, 59));
+  /*background: linear-gradient( to bottom, rgb(33, 34, 34), rgb(59, 59, 59));*/
+  background: transparent;
+  backdrop-filter: blur(7px);
   color: white;
   border: 2px solid;
   border-style: none;
@@ -216,7 +220,7 @@ nav > ul {
   color: rgb(219, 218, 218);
   text-decoration: none;
   outline: none;
-  border-bottom: 1px solid rgb(92, 91, 91);
+  border-bottom: 1px solid  rgb(219, 218, 218);
   font-family: 'Lato', sans-serif;
   font-size: 15px;
   margin-top: 10px;
