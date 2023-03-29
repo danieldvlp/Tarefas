@@ -124,8 +124,11 @@ nav > ul {
   margin-bottom: 15px;
 }
 .task-title {
-  font-size: 20px;
-  color: white;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-color:#666;
+  border-radius: 7px 7px 0px 0px;
 }
 
 .name {
@@ -156,6 +159,8 @@ nav > ul {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   position: relative;
   border-radius: 10px;
+  max-height: 180px;
+  overflow-y: none;
 }
 
 .task-content {
@@ -167,6 +172,7 @@ nav > ul {
   max-height: 100%;
   max-width: 100%;
   overflow: hidden;
+  overflow-y: auto;
 }
 
 .task.hovered .confirm-button {
