@@ -128,3 +128,25 @@ function addTask(taskTitle, taskName) {
 }
 
 
+/*
+$(document).ready(function() {
+  $('#add').click(function() {
+      $('.task-form').fadeIn();
+  });
+
+  $('.close').click(function() {
+      $('.add-todo').fadeOut();
+  });
+
+  $('.save').click(function() {
+      var title = $('#title').val();
+      var task = $('#task').val();
+
+      if (title == '' || task == '') {
+          alert('Por favor, preencha os campos!');
+      } else {
+          $('.list').append('<div class="item"><h3>' + title + '</h3><p>' + task + '</p></div>');
+          $('.add-todo').fadeOut();
+      }
+  });
+});*/

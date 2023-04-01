@@ -1,0 +1,118 @@
+<html>
+<head>
+    <title>Lista de Tarefas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#add').click(function() {
+                $('.add-todo').fadeIn();
+            });
+
+            $('.close').click(function() {
+                $('.add-todo').fadeOut();
+            });
+
+            $('.save').click(function() {
+                var title = $('#title').val();
+                var task = $('#task').val();
+
+                if (title == '' || task == '') {
+                    alert('Por favor, preencha os campos!');
+                } else {
+                    $('.list').append('<div class="item"><h3>' + title + '</h3><p>' + task + '</p></div>');
+                    $('.add-todo').fadeOut();
+                }
+            });
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .add-todo {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        input[type="text"], textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .list {
+            margin-top: 30px;
+        }
+
+        .item {
+            background-color: #f8f8f8;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-top: 0;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        <button id="add">+</button>
+
+        <div class="add-todo">
+            <span class="close">&times;</span>
+            <input type="text" id="title" placeholder="Título">
+            <textarea id="task" placeholder="Tarefa"></textarea>
+            <button class="save">Salvar</button>
+        </div>
+    </div>  
+</body>
