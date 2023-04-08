@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarefas</title>
+</head>
+<body>
+  <div id="app">
+    <div class="task-list">
+      <div class="add-task" @click="addTask">
+        <span>+</span>
+      </div>
+      <div class="task" v-for="(task, index) in tasks" :key="index">
+        <div class="title">{{ task.title }}</div>
+        <div class="content" v-if="task.editing">
+          <input type="text" v-model="task.title" placeholder="Title" />
+          <textarea v-model="task.text" placeholder="Enter task description"></textarea>
+          <button @click="saveTask(index)">Save</button>
+          <button @click="cancelTask(index)">Cancel</button>
+        </div>
+        <div class="content" v-else>
+          <div class="text">{{ task.text }}</div>
+          <div class="buttons">
+            <button @click="editTask(index)">Edit</button>
+            <button @click="deleteTask(index)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</body>P
+<script src="tarefa04.js"></script>
+</html>

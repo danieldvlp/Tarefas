@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task List</title>
+  <style>
+    .task {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 250px;
+      height: 250px;
+      background-color: white;
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    .delete-task {
+      float: right;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="task-container"></div>
+  <button onclick="addTask()">+</button>
+
+  <script>
+    function addTask() {
+      var taskContainer = document.getElementById("task-container");
+
+      var taskDiv = document.createElement("div");
+      taskDiv.classList.add("task");
+
+      var deleteButton = document.createElement("div");
+      deleteButton.classList.add("delete-task");
+      deleteButton.title = "Delete task";
+      deleteButton.onclick = function() {
+        taskContainer.removeChild(taskDiv);
+      };
+      deleteButton.innerHTML = "X";
+
+      var taskContent = document.createElement("div");
+      taskContent.classList.add("task-content");
+      taskContent.contentEditable = true;
+
+      taskDiv.appendChild(deleteButton);
+      taskDiv.appendChild(taskContent);
+
+      taskContainer.appendChild(taskDiv);
+    }
+  </script>
+</body>
+</html>

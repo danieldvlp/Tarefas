@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Minha Lista de Tarefas</title>
-    <link rel="stylesheet" href="orgtarefa.css" />
-  </head>
-  <body>
+  <link rel="stylesheet" href="orgtarefa.css" />
+</head>
+<body>
 		<header>
 			<nav>
 				<h1>Minhas Tarefas</h1>
@@ -18,28 +18,10 @@
         </ul>
 			</nav>
 		</header>
-    <div class="container">
-      <div class="tasks"></div>
-      <div class="add-task">
-        <button id="add-button">+</button>
 
-
-
-        <div class="task-form">
-          <div class="title">
-            <label for="task-title">Título:</label>
-            <input type="text" id="task-title" placeholder="Digite aqui..."/>
-          </div>
-          <div class="name">
-            <label for="task-name">Tarefa:</label>
-            <input type="text" id="task-name" placeholder="Digite aqui..."/>
-          </div><br>
-          <button id="save-button">Salvar</button>
-
-          
-      </div>
-    </div>
+    <div id="task-container"></div>
+    <button onclick="addTask()">+</button>
 
     <script src="app.js"></script>
-  </body>
+</body>
 </html>
